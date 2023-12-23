@@ -8,4 +8,5 @@ const dirPath = path.resolve(__dirname, "pic");
 const dateArr = new Date().toLocaleDateString().split("/"); // 本地调试时用.toLocaleDateString("en")
 dateArr.unshift(dateArr.pop());
 const date = dateArr.join("-");
+console.log(dateArr, date, '=======--')
 request(url).pipe(fs.createWriteStream(`${dirPath}/${date}.png`));

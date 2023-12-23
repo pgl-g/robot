@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gumingWu/robot.git"
+    "url": "git+https://github.com/pgl-g/robot.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "pgl-g",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gumingWu/robot/issues"
   },
-  "homepage": "https://github.com/gumingWu/robot#readme",
+  "homepage": "https://github.com/pgl-g/robot/#readme",
   "dependencies": {
     "request": "^2.88.2"
   }
