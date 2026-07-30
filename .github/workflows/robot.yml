@@ -15,7 +15,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run
-        run: node main.js
+        run: |
+          node -v
+          node main.js
+          ls -la pic/ | tail -5
 
       - name: Commit
         uses: EndBug/add-and-commit@v9
