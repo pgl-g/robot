@@ -2,28 +2,23 @@ name: automatic-save-robot
 on:
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   bots:
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout code"
-        uses: actions/checkout@v1
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: "Set node"
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-
-      - name: "Install"
-        run: npm install
-
-      - name: "Run bash"
+      - name: Run
         run: node main.js
 
-      - name: "Commit"
-        uses: EndBug/add-and-commit@v4
+      - name: Commit
+        uses: EndBug/add-and-commit@v9
         with:
           message: "feat: save robot"
           add: "pic/*"
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

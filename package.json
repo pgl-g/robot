@@ -4,7 +4,7 @@
   "description": "每天定时存一个robot图片",
   "main": "main.js",
   "scripts": {
-    "build": "esbuild main.js --outfile=dist/index.js --bundle"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/pgl-g/robot/issues"
   },
-  "homepage": "https://github.com/pgl-g/robot/#readme",
-  "dependencies": {
-    "request": "^2.88.2"
-  }
+  "homepage": "https://github.com/pgl-g/robot/#readme"
 }
